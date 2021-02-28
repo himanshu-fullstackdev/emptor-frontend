@@ -37,3 +37,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .logo { width:150px; }
 }
 
+/*=========================== PAGES ===============================*/
+
+// page - 404
+.page-404 {
+  & { display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+  h1 { margin-bottom: 0px; }
+  span { font-size: 40px; }
+}
