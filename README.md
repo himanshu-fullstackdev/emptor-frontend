@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
+## How to get started
+
+1. clone this repo via `git clone https://himanshu73188@bitbucket.org/himanshu73188/emptor-frontend.git`
+2. Run `npm install`
+3. Run `ng serve`
+4. Navigate to [ http://localhost:4200/ ](http://localhost:4200/).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
