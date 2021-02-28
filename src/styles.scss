@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*=========================== GLOBAL CSS ===============================*/
+
+// theme colors
+$maincolor: #db4c3f;
+$themeaccentcolor: #ae362b;
+$bg-failure: #eb4d4b;
+$bg-success: #6ab04c;
+$bg-pending: rgba(189,100,0,0.6);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container { max-width: 1440px; margin: 0px 70px; width: calc(100% - 140px); }
+
+// scrollbar
+::-webkit-scrollbar { height: 6px; width: 6px; }
+::-webkit-scrollbar-thumb { background-color: #6e6e6e; outline: #444 solid 1px; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+/*=========================== MATERIAL ===============================*/
+
+// Snackbar container
+.mat-snack-bar-container {margin: 20px !important;}
+.mat-snack-bar-container-failure {background-color: $bg-failure;}
+.mat-snack-bar-container-success {background-color: $bg-success;}
+.mat-snack-bar-container-pending {background-color: $bg-pending;color: #fff;}
+
+// spinner
+.matspinner { justify-content: center; align-items:center; display: flex; min-height: 50vh; }
+
+/*=========================== APP ===============================*/
+
+// header
+.header {
+  & { background-color: #fff; position: fixed; z-index: 1000; }
+  .logo { width:150px; }
+}
+
