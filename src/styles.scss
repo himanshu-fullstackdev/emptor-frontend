@@ -9,7 +9,10 @@ $bg-failure: #eb4d4b;
 $bg-success: #6ab04c;
 $bg-pending: rgba(189,100,0,0.6);
 
-html, body { height: 100%; }
+// fonts
+$mainfont: Roboto, "Helvetica Neue", sans-serif;
+
+html, body { height: 100%; font-family: $mainfont; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container { max-width: 1440px; margin: 0px 70px; width: calc(100% - 140px); }
 
@@ -42,6 +45,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // page - 404
 .page-404 {
   & { display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center; }
-  h1 { margin-bottom: 0px; }
+  h1 { margin-bottom: 0px; font-weight: 400; font-size: 24px; }
   span { font-size: 40px; }
 }
