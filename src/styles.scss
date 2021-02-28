@@ -15,7 +15,7 @@ $mainfont: Roboto, "Helvetica Neue", sans-serif;
 // classes
 html, body { height: 100%; font-family: $mainfont; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.container { max-width: 1440px; margin: 0px 70px; width: calc(100% - 140px); }
+.container { max-width: 1440px; margin: 0px auto; width: calc(100% - 140px); }
 .toolbar-spacer { flex: 1 1 auto; }
 .header-spacer { margin-top:64px; }
 .mat-toolbar { background: #fff; }
@@ -48,7 +48,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 // global  
 .app-page {
-  .page-title { padding: 20px 0px; margin: 0; text-transform: uppercase; color:$text-color; font-weight: 500; }
+  .page-title { padding: 20px 0px; margin: 0; text-transform: uppercase; color:$text-color; font-weight: 500; font-size: 28px; }
+  .mat-toolbar { padding: 15px 0px; }
 }
 
 // page - 404
@@ -59,3 +60,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 // persons page
+.person-page {
+  .persons-wrapper { 
+    & { display: flex; flex-wrap: wrap; }
+    .mat-card { flex: 0 0 calc(25% - 53px); margin: 0px 15px 60px; padding: 15px; box-shadow: 4px 2px 14px 0 rgb(0 0 0 / 17%) !important; background-color:$maincolor; }
+    .mat-card:nth-child(4n + 1) { margin-left: 0px; }
+    .mat-card:nth-child(4n) { margin-right: 0px; }
+    .mat-card-image { margin: -5px -5px 0px -5px !important; width: calc(100% + 8px); border-radius: 4px !important; }
+    .mat-card-title { font-size: 18px; margin-bottom: 10px; }
+    .mat-card-subtitle { margin-bottom: 8px !important; }
+    .mat-card-content { padding: 15px 0px; text-align: center; font-size: 15px; }
+    .person-biography { color: $text-color; }
+    .person-biography a { text-decoration: underline; font-size: 15px; cursor: pointer; }
+    .person-biography .biography-title { font-weight: 500; }
+    .tags-wrapper { margin-bottom: 5px; color: $text-color; }
+    .tags-wrapper .tags-title { font-weight: 500; }
+  }
+}

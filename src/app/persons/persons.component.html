@@ -8,6 +8,29 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <!--  -->
+  <!-- persons -->
+  <div class="persons-wrapper">
+    <mat-card *ngFor="let person of personsData; let i = index" data-aos="fade-up" data-aos-duration="1000" [attr.data-aos-offset]="i*80">
+      <!-- image -->
+      <img mat-card-image src="../../assets/person-placeholder.jpg" alt={{person.name}}>
+      <mat-card-content>
+        <!-- name -->
+        <mat-card-title>{{ person.name }}</mat-card-title>
+        <!-- DOB -->
+        <mat-card-subtitle>{{ person.date_of_birth | date:'dd MMM, yyyy' }}</mat-card-subtitle>
+        <!-- tags -->
+        <div class="tags-wrapper" *ngIf="person.metadata.tags.length > 0">
+          <span class="tags-title">Tags:&nbsp;</span>
+          <span class="tag" *ngFor="let tag of person.metadata.tags; let j = index">{{ tag }}{{j === person.metadata.tags.length - 1 ? '' : ',&nbsp;' }}</span>
+        </div>
+        <!-- biography -->
+        <div class="person-biography">
+          <span class="biography-title">Biography:&nbsp;</span>
+          {{ person.showText ? person.biography : person.biography.substr(0, 70) + '...' }}
+          <a (click)="person.showText = !person.showText" *ngIf="person.biography.length > 25">{{ person.showText ? 'show less': 'show more' }}</a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
 </div>
