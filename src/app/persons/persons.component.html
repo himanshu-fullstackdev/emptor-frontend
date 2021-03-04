@@ -27,7 +27,7 @@
         <div class="person-biography">
           <span class="biography-title">Biography:&nbsp;</span>
           {{ person.showText ? person.biography : person.biography.substr(0, 70) + '...' }}
-          <a (click)="person.showText = !person.showText" *ngIf="person.biography.length > 25">{{ person.showText ? 'show less': 'show more' }}</a>
+          <a (click)="person.showText = !person.showText" *ngIf="person.biography.length > 70">{{ person.showText ? 'show less': 'show more' }}</a>
         </div>
       </mat-card-content>
     </mat-card>
